@@ -17,7 +17,7 @@ To build/test the project locally on your computer:
 1. **Clone this repo**<br>
 For deployment (read only, public access)
 
-    git clone https://gitlab.ci.gsnet.corp/apimanageruk/poc-swagger-middleware.git
+    git clone https://amargendie@bitbucket.org/isbanapimanagement/poc-swagger-middleware.git
 
 For development (full access, auth. users)
 
