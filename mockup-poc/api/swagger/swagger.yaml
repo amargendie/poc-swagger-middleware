@@ -1,0 +1,527 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Accounts
+  x-ibm-name: accounts
+  description: >-
+    The Accounts API allows TPP to interact with the Accounts of a Stander Bank
+    user on his behalf, making available the following operations:
+
+    - Create, update, delete and retrieve detailed information of an account
+    specified by account_Id
+
+    - Confirms whether the specified sort-code and account number match the
+    account name of an account specified by account_Id
+  contact:
+    name: Alberto Pulido
+host: $(catalog.host)
+basePath: /accounts
+paths:
+  /:
+    parameters:
+      - $ref: '#/parameters/Accept-Language'
+      - $ref: '#/parameters/Authorization'
+      - $ref: '#/parameters/X-Santander-Channel'
+      - $ref: '#/parameters/X-Santander-Global-Id'
+    get:
+      responses:
+        '200':
+          description: 200 OK
+          schema:
+            $ref: '#/definitions/responseListAccounts'
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/responseResult'
+        '401':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/responseResult'
+        '404':
+          description: Not Found
+          schema:
+            $ref: '#/definitions/responseResult'
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/responseResult'
+      description: 'Returns all accounts, optionally filtered by one or more criteria'
+      summary: Returns all accounts
+      tags:
+        - All
+        - Accounts
+      operationId: findAccounts
+      parameters:
+        - name: sort_code
+          type: string
+          required: false
+          in: query
+          description: Filters accounts by sort code
+        - name: account_name
+          type: string
+          required: false
+          in: query
+          description: Filters accounts by account name
+    post:
+      responses:
+        '200':
+          description: 200 OK
+          schema:
+            $ref: '#/definitions/responseAccount'
+        '201':
+          description: 201 Created
+          schema:
+            $ref: '#/definitions/responseAccount'
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/responseResult'
+        '401':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/responseResult'
+        '404':
+          description: Not Found
+          schema:
+            $ref: '#/definitions/responseResult'
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/responseResult'
+      parameters:
+        - name: accountData
+          required: true
+          in: body
+          schema:
+            $ref: '#/definitions/accountData'
+          description: The Account details to be created
+      tags:
+        - Create
+        - New Account
+      summary: Create a new Account.
+      operationId: create.account
+  '/{account_id}':
+    parameters:
+      - $ref: '#/parameters/Accept-Language'
+      - $ref: '#/parameters/Authorization'
+      - $ref: '#/parameters/X-Santander-Channel'
+      - $ref: '#/parameters/X-Santander-Global-Id'
+      - $ref: '#/parameters/account_id'
+    get:
+      responses:
+        '200':
+          description: 200 OK
+          schema:
+            $ref: '#/definitions/responseAccount'
+        '400':
+          description: Bad Request
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+        '401':
+          description: Unauthorized
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+        '404':
+          description: Not Found
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+        '500':
+          description: Internal Server Error
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+    delete:
+      description: Deletes a single accpount based on the account id supplied
+      operationId: deleteAccouont
+      responses:
+        '200':
+          description: 200 OK
+          schema:
+            $ref: '#/definitions/responseAccount'
+        '400':
+          description: Bad Request
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+        '401':
+          description: Unauthorized
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+        '404':
+          description: Not Found
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+        '500':
+          description: Internal Server Error
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+    put:
+      responses:
+        '200':
+          description: 200 OK
+          schema:
+            $ref: '#/definitions/responseAccount'
+        '400':
+          description: Bad Request
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+        '401':
+          description: Unauthorized
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+        '404':
+          description: Not Found
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+        '500':
+          description: Internal Server Error
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+      parameters:
+        - name: account
+          required: true
+          in: body
+          schema:
+            $ref: '#/definitions/responseAccount'
+    patch:
+      responses:
+        '200':
+          description: 200 OK
+          schema:
+            $ref: '#/definitions/responseAccount'
+        '400':
+          description: Bad Request
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+        '401':
+          description: Unauthorized
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+        '404':
+          description: Not Found
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+        '500':
+          description: Internal Server Error
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+      parameters:
+        - name: account
+          required: true
+          in: body
+          schema:
+            $ref: '#/definitions/responseAccount'
+  '/{account_id}/validate':
+    parameters:
+      - $ref: '#/parameters/Accept-Language'
+      - $ref: '#/parameters/Authorization'
+      - $ref: '#/parameters/X-Santander-Channel'
+      - $ref: '#/parameters/X-Santander-Global-Id'
+      - $ref: '#/parameters/account_id'
+    post:
+      summary: Confirms whether the specified sort-code and account number match the account name
+      description: "The request accepts three parameters - an account number, sort code and account name.\n\nThe ASPSP scores the match between 0 (poor match  - high risk) to 10 (good match - low risk).\n\nEach ASPSP may compute the scores differently, but these will be broadly based on the name matching rules defined for the Account Switching Service.\n\nThe ASPSP can only evaluate scores for accounts that it owns. If the account is owned by another ASPSP an error code is returned. The TPP should ensure that the confirm-payee request is directed to the appropriate ASPSP using a sort-code lookup table (e.g. this could be a lookup through the EISCD)\n\nThe caller may optionally send a correlation id as part of the header. \n\nThe ASPSP will also issue its own correlation id that can be used for future service requests related to this API call.\n\nThe TPP must call the API over a mutually authenticated TLS 1.2 connection. \n\nThe TPP must pass in a valid OAuth 2.0 access token that it has obtained through a client-secret grant. If the access token is missing, the API responds with an error.\n"
+      tags:
+        - Confirmation of Payee
+        - validate
+      parameters:
+        - name: validatetData
+          required: true
+          in: body
+          description: |
+            The account details to be verified
+          schema:
+            $ref: '#/definitions/validateData'
+      responses:
+        '200':
+          description: 200 OK
+          schema:
+            $ref: '#/definitions/responseRiskScore'
+        '400':
+          description: Bad Request
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+        '401':
+          description: Unauthorized
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+        '404':
+          description: Not Found
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+        '500':
+          description: Internal Server Error
+          headers: {}
+          examples: {}
+          schema:
+            $ref: '#/definitions/responseResult'
+      operationId: account.validate
+      consumes:
+        - application/json
+securityDefinitions:
+  X-Santander-Client-Id:
+    description: ''
+    in: header
+    name: X-IBM-Client-Id
+    type: apiKey
+security:
+  - X-Santander-Client-Id: []
+x-ibm-configuration:
+  assembly:
+    execute:
+      - switch:
+          title: switch
+          case:
+            - condition: "(api.operation.id==='account.validate')"
+              execute:
+                - proxy:
+                    title: proxy
+                    timeout: 60
+                    verb: keep
+                    cache-response: protocol
+                    cache-ttl: 900
+                    target-url: '$(backend-server)/api/v1/accounts/{account_id}/validate'
+                    description: Account Validate
+            - condition: "(api.operation.id==='findAccounts')"
+              execute:
+                - proxy:
+                    title: proxy
+                    timeout: 60
+                    verb: keep
+                    cache-response: protocol
+                    cache-ttl: 900
+                    target-url: '$(backend-server)/api/v1/accounts/{account_id}/validate'
+    catch: []
+  enforced: true
+  testable: true
+  phase: realized
+  cors:
+    enabled: true
+  gateway: datapower-gateway
+  properties:
+    backend-server:
+      value: ''
+      description: ''
+      encoded: false
+  catalogs:
+    Local:
+      properties:
+        backend-server: 'http://localhost:8480'
+    Development:
+      properties:
+        backend-server: 'http://180.112.36.128:8480'
+consumes:
+  - application/json
+produces:
+  - application/json
+definitions:
+  responseResult:
+    type: object
+    properties:
+      httpCode:
+        type: string
+        description: indicates the status code of the response. This information is also available in the status line
+        example: '401'
+      httpMessage:
+        type: string
+        description: detailed message of the error and stack trace if applies
+        example: Unauthorized
+      moreInformation:
+        type: string
+        description: More information
+        example: Failed to verify OAuth information.
+  riskScoreData:
+    type: object
+    description: |
+      Risk score
+    properties:
+      riskScore:
+        type: integer
+        description: |
+          Provided only in the response.  A number from 0 to 10.
+  responseRiskScore:
+    type: object
+    properties:
+      result:
+        $ref: '#/definitions/responseResult'
+      data:
+        $ref: '#/definitions/riskScoreData'
+  address:
+    properties:
+      street:
+        type: string
+        minLength: 1
+      city:
+        type: string
+        minLength: 1
+      state:
+        type: string
+        minLength: 2
+        maxLength: 2
+        pattern: '^[A-Z]+$'
+      zipcode:
+        type: integer
+        minimum: 10000
+        maximum: 99999
+  customer:
+    required:
+      - customerName
+    properties:
+      customerId:
+        type: string
+        description: REQUIRED. Customer Identification.
+        example: jsnow@gmail.com
+        default: jsnow@gmail.com
+      customerName:
+        type: string
+        description: REQUIRED. Customer Full Name.
+        example: Jon Snow
+        default: Jon Snow
+      address:
+        $ref: '#/definitions/address'
+  accountData:
+    type: object
+    description: |
+      A bank account detail
+    properties:
+      accountId:
+        type: string
+        description: "REQUIRED. An eight character string representing a bank account number. \n"
+        example: '00000001'
+        default: '00000001'
+      accountType:
+        type: string
+        description: |
+          REQUIRED.  Account type (IBAN, CCC, Partenón, etc).
+        example: IBAN
+        default: IBAN
+      status:
+        type: string
+        description: "REQUIRED. Account State Code. \n"
+        example: Active
+        default: Active
+      creationDate:
+        type: string
+        description: REQUIRED. Account State Description.
+        example: 01-01-2016
+        default: 01-01-2016
+      balance:
+        type: string
+        description: REQUIRED. Current available balance.
+        example: '500.00'
+        default: '500.00'
+      creditLimit:
+        type: string
+        description: REQUIRED. Credit limit.
+        example: '300.00'
+        default: '300.00'
+      customer:
+        $ref: '#/definitions/customer'
+  validateData:
+    type: object
+    description: |
+      A bank account
+    properties:
+      sortCode:
+        type: string
+        description: |
+          REQUIRED.  Six character string consisting of digits only.
+        example: '000000'
+        default: '000000'
+      accountName:
+        type: string
+        description: >
+          REQUIRED. The acccount name. For the Confirmation of Payee request this
+          is the name against which the details are validated.
+        example: Jon Snow
+        default: Jon Snow
+    required:
+      - sortCode
+      - accountName
+  responseAccount:
+    type: object
+    properties:
+      result:
+        $ref: '#/definitions/responseResult'
+      data:
+        $ref: '#/definitions/accountData'
+  listAccountsData:
+    type: array
+    items:
+      $ref: '#/definitions/accountData'
+  responseListAccounts:
+    type: object
+    properties:
+      result:
+        $ref: '#/definitions/responseResult'
+      data:
+        $ref: '#/definitions/listAccountsData'
+schemes:
+  - https
+parameters:
+  Accept-Language:
+    name: Accept-Language
+    type: string
+    required: true
+    in: header
+    description: 'The Accept request-header field can be used to specify certain media types which are acceptable for the response. Accept headers can be used to indicate that the request is specifically limited to a small set of desired types, as in the case of a request for an in-line image.'
+  Authorization:
+    name: Authorization
+    type: string
+    required: true
+    in: header
+    description: The Authorization field value consists of credentials       containing the authentication information of the user agent for       the realm of the resource being requested
+  X-Santander-Global-Id:
+    name: X-Santander-Global-Id
+    type: string
+    required: false
+    in: header
+    description: 'Unique ID for each transaction for trace all call E2E. The recommendation is to inform this field from outside the Santander system, in order to trace the call from clients. However, if the field is not informed, a new UUID will be assigned at API level. The format of the field is 550e8400-e29b-41d4-a716-446655440000'
+  X-Santander-Channel:
+    name: X-Santander-Channel
+    type: string
+    required: false
+    in: header
+    description: 'Channel associated to the business area. It represents a way to access to the information contained in the API. Channel is used for customize the user experience in case that the API should be configured at functional level. Transformations of the information will be realized at API level. Available channels are internet, branch, mobile, wear'
+  account_id:
+    name: account_id
+    type: string
+    required: true
+    in: path
+    description: An eight character string representing a bank account number.
