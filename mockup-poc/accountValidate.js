@@ -21,6 +21,7 @@ middleware(swaggerFile, app, function(err, middleware) {
     middleware.files(),
     middleware.parseRequest(),
     middleware.validateRequest(),
+    middleware.editor(),
     middleware.mock()
   );
   
@@ -28,8 +29,16 @@ middleware(swaggerFile, app, function(err, middleware) {
     res.sendFile(__dirname + '/index.html');
   });  
 
+  app.use(function (req, res, next) {   
+    var options = {"port":"","host":"","silent":""};
+    var cb;
+    var editor = require('../lib/editor/swagger_editor');
+   // editor.edit(swaggerFile, options, cb);
+    next();
+  });
+  
   app.listen(9000, function() {
-    console.log('The Swagger Pet Store is now running at http://localhost:9000');
+    console.log('The PoC is now running at http://localhost:9000');
   });
 
   var open = require('open');
@@ -37,10 +46,4 @@ middleware(swaggerFile, app, function(err, middleware) {
 });
 
 
-  app.use(function (req, res, next) {   
-    var options = {"port":"","host":"","silent":""};
-    var cb;
-    var editor = require('../lib/editor/swagger_editor');
-    editor.edit(swaggerFile, options, cb);
-    next();
-});
+
