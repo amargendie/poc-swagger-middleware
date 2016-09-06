@@ -21,7 +21,6 @@ middleware(swaggerFile, app, function(err, middleware) {
     middleware.files(),
     middleware.parseRequest(),
     middleware.validateRequest(),
-    middleware.editor(),
     middleware.mock()
   );
   
@@ -36,7 +35,7 @@ middleware(swaggerFile, app, function(err, middleware) {
   var open = require('open');
   open('http://localhost:9000');
 });
-});
+
 
   app.use(function (req, res, next) {   
     var options = {"port":"","host":"","silent":""};
