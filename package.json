@@ -19,7 +19,7 @@
     "upgrade": "ncu \"/(!multer)/\" --upgradeAll && npm update",
     "bump": "bump --prerelease --tag --push --all",
     "release": "npm run upgrade && npm run build && npm test && npm run bump && npm publish",
-    "start": "cd mockup-poc && node accountValidate.js"
+    "start": "cd samples && node sample0.js"
   },
   "repository": {
     "type": "git",
