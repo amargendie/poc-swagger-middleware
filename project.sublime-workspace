@@ -1,0 +1,334 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cm",
+				"compile"
+			],
+			[
+				"ca",
+				"call1"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 1975,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/amargendie/Cursos/Nodejs/Swagger-mock/poc-swagger-middleware"
+	],
+	"file_history":
+	[
+		"/Users/amargendie/Cursos/Nodejs/Swagger-mock/mockup-poc/accountValidate.js",
+		"/Users/amargendie/Cursos/Nodejs/Swagger-mock/poc-swagger-middleware/package.json",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/src/server/services/CatalogueService.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/client/model/catalogue.json",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/src/server/app.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/src/server/routes/CatalogueRouter.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/src/server/routes/userRouter.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/config/default.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/src/server/catalog-config.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/app.js",
+		"/Users/amargendie/Cursos/Nodejs/poc/test_cors.js",
+		"/Users/amargendie/Cursos/Nodejs/Swagger-mock/mockup-poc/account.yaml",
+		"/Users/amargendie/node_modules/swagger-express-middleware/lib/request-validator.js",
+		"/Users/amargendie/node_modules/swagger-express-middleware/lib/mock/index.js",
+		"/Users/amargendie/node_modules/swagger-express-middleware/lib/helpers/json-schema.js",
+		"/Users/amargendie/node_modules/swagger-express-middleware/lib/mock/semantic-response.js",
+		"/Users/amargendie/node_modules/swagger-express-middleware/lib/mock/edit-collection.js",
+		"/Users/amargendie/Cursos/Nodejs/Swagger-mock/swagger-express-middleware/samples/index.html",
+		"/Users/amargendie/Cursos/Nodejs/test/swagger/ResponseResult.yaml",
+		"/Users/amargendie/Cursos/Nodejs/Swagger-mock/mockup-poc/swagger.yaml",
+		"/Users/amargendie/Cursos/Nodejs/Swagger-mock/swagger-express-middleware/samples/sample2.js",
+		"/Users/amargendie/Cursos/Nodejs/Swagger-mock/swagger-express-middleware/samples/PetStore.yaml",
+		"/Users/amargendie/Cursos/Nodejs/Swagger-mock/swagger-express-middleware/samples/node_modules/swagger-express-middleware/index.js",
+		"/Users/amargendie/Cursos/Nodejs/Swagger-mock/swagger-express-middleware/samples/app.js",
+		"/Users/amargendie/Cursos/Nodejs/Swagger-mock/swagger-server/app.js",
+		"/Users/amargendie/Cursos/Nodejs/Swagger-mock/swagger-mock-api/src/MockData.js",
+		"/Users/amargendie/Cursos/Nodejs/test/index.html",
+		"/Users/amargendie/Cursos/Nodejs/test/mock2.js",
+		"/Users/amargendie/Cursos/Nodejs/test/mock.js",
+		"/Users/amargendie/Cursos/Nodejs/test/PetStore.yaml",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/test/server/AccountServiceTest.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/test/server/data.json",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/client/api.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/client/client.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/src/server/mocks/UserModel.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/src/server/utils/Validator.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/src/server/utils/MemoryCache.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/src/server/utils/deepFreeze.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/src/server/utils/cacheFactory.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/src/server/routes/systemRouter.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/src/server/model/helpers.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/src/server/model/LogModel.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/src/server/mocks/LogModel.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/src/server/mocks/AccountModel.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/src/server/mocks/AccountData.json",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/package.json",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/client/uploadAngular.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/api/swagger/swagger.yaml",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/README.md",
+		"/Users/amargendie/Cursos/Nodejs/console.js",
+		"/Users/amargendie/Cursos/Nodejs/api-openbank-cop-poc/Gruntfile.js",
+		"/Users/amargendie/Cursos/Maven/maven102-section1-complete-master/pickerNumberApplication1-complete/pom.xml",
+		"/Users/amargendie/Cursos/Maven/maven102-section1-complete-master/plusplus-complete/pom.xml",
+		"/Users/amargendie/Cursos/Maven/maven102-section1-complete-master/pom.xml",
+		"/Users/amargendie/Cursos/PoC/Ejemplo.yaml",
+		"/Users/amargendie/Cursos/PoC/Finance.yaml",
+		"/Users/amargendie/Downloads/sample.jks",
+		"/opt/tibco/bw6/studio/4.0/eclipse/configuration/config.ini",
+		"/Users/amargendie/Cursos/Microservicios/Microservices-With-Spring-Student-Files-master/lab-8/client/src/main/java/demo/LuckyWordController.java",
+		"/Users/amargendie/Cursos/Microservicios/Microservices-With-Spring-Student-Files-master/lab-8/client/src/main/java/demo/Application.java",
+		"/Users/amargendie/Cursos/Microservicios/Microservices-With-Spring-Student-Files-master/lab-8/client-solution/src/main/resources/bootstrap.yml",
+		"/Users/amargendie/Cursos/Microservicios/Microservices-With-Spring-Student-Files-master/lab-8/client-solution/src/main/java/demo/LuckyWordController.java",
+		"/Users/amargendie/Cursos/Nodejs/proxyServer.js",
+		"/Users/amargendie/Cursos/Nodejs/postExample.js",
+		"/Users/amargendie/Cursos/Nodejs/getToken.js",
+		"/Users/amargendie/Cursos/Nodejs/test_cors.js",
+		"/Users/amargendie/Cursos/Nodejs/postExample",
+		"/Users/amargendie/Downloads/apipartners.sql",
+		"/Users/amargendie/Cursos/Nodejs/poc-1/application/views/pages/home.php",
+		"/Users/amargendie/Cursos/Nodejs/token",
+		"/Users/amargendie/Cursos/Nodejs/post.js",
+		"/Users/amargendie/Cursos/Nodejs/solares cantabria",
+		"/Users/amargendie/Cursos/Microservicios/Microservices-With-Spring-Student-Files-master/lab-4/eureka-client-solution/pom.xml",
+		"/Users/amargendie/Cursos/Microservicios/Microservices-With-Spring-Student-Files-master/lab-3/server-solution/pom.xml",
+		"/Users/amargendie/Cursos/Microservicios/Microservices-With-Spring-Student-Files-master/lab-1/boot-solution/src/main/java/demo/Application.java",
+		"/Users/amargendie/Documents/cassandra.txt",
+		"/Users/amargendie/Downloads/Robert_Sencilla.sql",
+		"/Users/amargendie/Downloads/Marco_Sencilla.sql",
+		"/Users/amargendie/Downloads/Robert_Compleja.sql",
+		"/Users/amargendie/Downloads/MarcoCompleja.sql",
+		"/Users/amargendie/Downloads/java-client/src/main/java/io/swagger/client/auth/OAuth.java",
+		"/Users/amargendie/Downloads/java-client/src/main/java/io/swagger/client/api/EstimatesApi.java",
+		"/Users/amargendie/Downloads/java-client/pom.xml",
+		"/Users/amargendie/Cursos/temp/sample.html",
+		"/Users/amargendie/Documents/StringConn.lbc",
+		"/Users/amargendie/Downloads/udactiy-ds-hadoop-mapReduce-intro-master/p2_reducer3.py",
+		"/Users/amargendie/wso2am/repository/conf/tomcat/carbon/WEB-INF/web.xml",
+		"/export PATH",
+		"/Users/amargendie/Documents/myPATH"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"var",
+			"getRequestSchema",
+			"swaggerMethods",
+			"util.debug",
+			"util.debug(",
+			"201",
+			"post",
+			"USING",
+			"appears",
+			"mock(",
+			"queryResource",
+			"SemanticResponse",
+			"setWrapperInfo",
+			"isWrapped",
+			"mergeCollection",
+			"mockResponseBody",
+			"sendObject",
+			"data",
+			"Customer",
+			"pets",
+			"definitions",
+			"savePet",
+			"virtual",
+			"?"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Volumes"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1975,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								59,
+								59
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "project.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 256.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

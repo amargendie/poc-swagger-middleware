@@ -14,6 +14,8 @@ var path = require('path');
 var app = express();
 var swaggerFile = path.join(__dirname, 'swagger.yaml');
 
+var launchEditor = true; 
+
 middleware(swaggerFile, app, function(err, middleware) {
   app.use(
     middleware.metadata(),
@@ -21,29 +23,24 @@ middleware(swaggerFile, app, function(err, middleware) {
     middleware.files(),
     middleware.parseRequest(),
     middleware.validateRequest(),
-    middleware.editor(),
+  //  middleware.editor(),
     middleware.mock()
   );
   
   app.get('/', function(req, res){
+    console.log('redirect to index');
     res.sendFile(__dirname + '/index.html');
   });  
-
-  app.use(function (req, res, next) {   
-    var options = {"port":"","host":"","silent":""};
-    var cb;
-    var editor = require('../lib/editor/swagger_editor');
-   // editor.edit(swaggerFile, options, cb);
-    next();
-  });
   
   app.listen(9000, function() {
     console.log('The PoC is now running at http://localhost:9000');
   });
 
   var open = require('open');
-  open('http://localhost:9000');
+  open('http://localhost:9000/');
 });
+
+
 
 
 
