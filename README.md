@@ -55,8 +55,9 @@ Choose one:
 5. **Build and run docker image (TODO)**
 
 
-* docker build --build-arg http_proxy=http://170.15.40.4:8080 -t poccopmock .
-* docker run -p 8580:8480 -d poccopmock
+* docker build --build-arg http_proxy=http://your-proxy:port -t poc-swagger .
+* docker run -p 12707:9000 -d poc-swagger
+
 
 6. **Swagger edit**
 
