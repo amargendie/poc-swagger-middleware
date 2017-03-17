@@ -10,6 +10,7 @@ Prerequisites
 * node.js > 4.x
 * git
 * docker
+* paas
 
 #### Building/Testing
 To build/test the project locally on your computer:
